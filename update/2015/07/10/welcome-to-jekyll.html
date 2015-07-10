@@ -64,14 +64,23 @@
   <article class="post-content">
     <p>Hi, I am Frank !</p>
 
-<p>I live in cologne and work in a big company doing computer stuff.
-A lot of times I want to try out stuff from the internet,
+<p>I live in cologne and work in a big company doing computer stuff in the following languages.</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">puts</span> <span class="s1">&#39;Hello World&#39;</span><span class="c1"># ruby</span></code></pre></div>
+
+<div class="highlight"><pre><code class="language-fsharp" data-lang="fsharp"><span class="n">printfn</span> <span class="s">&quot;%S&quot;</span> <span class="s">&quot;Hello World&quot;</span><span class="c1">// fsharp</span></code></pre></div>
+
+<div class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="nb">write-host</span> <span class="s2">&quot;Hello&quot;</span> <span class="c"># powershell</span></code></pre></div>
+
+<p>A lot of times I want to try out stuff from the internet,
 and did not find working examples.</p>
 
 <p>In my computer engeneering career, my ability increases as I developed my personal information sysytem, where I can document what I was doing and have learned.
 So I am willing to share this with the word.</p>
 
-<p>So right now, dear reader, I am setting up a blog, and publish it to github.</p>
+<p>So right now, dear reader, I am setting up a blog,</p>
+
+<h2 id="create-octopress-blog">Create Octopress Blog</h2>
 
 <p>Octopress 3 is not really published, but seems to be working.</p>
 
@@ -82,37 +91,26 @@ ruby -v
 gem install octopress
 octopress new blog
 <span class="nb">cd </span>blog
-jekyll server
+jekyll server</code></pre></div>
 
-<span class="c"># create repo [user].github.io in your github</span>
+<h2 id="publish-it-to-githubio">publish it to github.io</h2>
 
-gem install octopress-deploy
-octopress deploy init</code></pre></div>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">gem install octopress-deploy
+octopress deploy init <span class="c"># and modify _deploy.yml</span>
+octopress build
+octopress deploy</code></pre></div>
 
-<p>You’ll find this post in your <code>_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code>jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+<p>You need to have an account on <a href="http://www.github.com">github</a> on create a <code>[user].github.io</code> repo
+The <code>init</code> was not working for me so I did the initial setup manually.
+* Create a <code>deploy.yaml</code> and modify it according to
+* Copy the <code>_site</code> directory to <code>.deploy</code>
+* link it to github
+* Set alias <code>alias op='octopress'</code></p>
 
-<p>To add new posts, simply add a file in the <code>_posts</code> directory that follows the convention <code>YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+<p>Here it is.
+bye for now</p>
 
-<p>Jekyll also offers powerful support for code snippets:</p>
-
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="c1"># ruby</span>
-<span class="nb">puts</span> <span class="s1">&#39;hello&#39;</span>
-<span class="c1">#=&gt; prints &#39;Hi, Tom&#39; to STDOUT.</span></code></pre></div>
-
-<div class="highlight"><pre><code class="language-fsharp" data-lang="fsharp"><span class="c1">// fsharp</span>
-<span class="k">type</span> <span class="nc">Employee</span> <span class="o">=</span>
-  <span class="o">|</span> <span class="n">Worker</span> <span class="k">of</span> <span class="n">Person</span>
-  <span class="o">|</span> <span class="n">Manager</span> <span class="k">of</span> <span class="n">Employee</span> <span class="kt">list</span></code></pre></div>
-
-<div class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="c"># powershell</span>
-<span class="nb">write-host</span> <span class="s2">&quot;Hello&quot;</span></code></pre></div>
-
-<h1 id="heading">heading</h1>
-
-<h2 id="heading2">heading2</h2>
-
-<p>Check out the <a href="http://jekyllrb.com">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://github.com/jekyll/jekyll-help">Jekyll’s dedicated Help repository</a>.</p>
-
+<p>Frank</p>
 
   </article>
 
